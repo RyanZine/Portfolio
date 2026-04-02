@@ -1,7 +1,7 @@
 # 🚀 RZ Portfolio - Ryan Zinedine
 
 <p align="center">
-  <img src="img/logo.png" alt="Logo RZ" width="150">
+  <img src="img/rz.png" alt="Logo RZ" width="150">
 </p>
 
 <p align="center">

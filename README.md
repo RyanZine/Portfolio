@@ -1,7 +1,7 @@
 # 🚀 RZ Portfolio - Ryan Zinedine
 
 <p align="center">
-  <img src="img/logo-rz.png" alt="Logo RZ" width="150">
+  <img src="img/logo.png" alt="Logo RZ" width="150">
 </p>
 
 <p align="center">
@@ -9,7 +9,7 @@
 </p>
 
 <p align="center">
-  <a href="https://seu-portfolio.vercel.app/">Visualizar Projeto Online</a>
+  <a href="https://portfolio.vercel.app/">Visualizar Projeto Online</a>
 </p>
 
 ---

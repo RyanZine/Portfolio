@@ -42,7 +42,6 @@ As principais ferramentas e linguagens utilizadas no desenvolvimento:
 ![preview RZ](video/portfolio.gif)
 
 
-*(Dica: Aqui você pode colocar um print da tela inicial do seu site ou um GIF dele funcionando)*
 
 ---
 

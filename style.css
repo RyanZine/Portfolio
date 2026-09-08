@@ -16,7 +16,7 @@
 /*desktop fist*/
 /*ajustes gerais*/
 body {
-    font-family: 'MontSerrat', sans-serif;
+    font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif;
     background-color: var(--fundo-escuro);
     color: var(--cor-texto);
     line-height: 1.6;
@@ -150,7 +150,7 @@ header h1 {
 
 /* Estilo da "Marca" no Header */
 .brand h1 {
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif;
     font-size: 1.8rem;
     font-weight: 800;
     color: #fff;
@@ -533,7 +533,7 @@ footer {
 }
 
 .timeline-date {
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif;
     color: var(--neon-cyan);
     font-weight: 700;
     font-size: 0.9rem;

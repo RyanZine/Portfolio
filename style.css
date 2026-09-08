@@ -30,6 +30,13 @@ html {
     -webkit-text-size-adjust: 100%;
 }
 
+/* as ancoras nao podem parar debaixo do header sticky */
+main[id],
+section[id],
+#contato {
+    scroll-margin-top: 5.5rem;
+}
+
 body {
     font-family: var(--fonte);
     background-color: var(--fundo);
@@ -309,9 +316,17 @@ strong {
     border-color: var(--texto-fraco);
 }
 
+/* o conteudo fica todo na coluna 2; a coluna 1 e exclusiva do numero.
+   sem isto o auto-place do grid joga a imagem e os paragrafos para dentro
+   dos 4.5rem reservados ao contador. */
+#projetos > ul > li > * {
+    grid-column: 2;
+}
+
 #projetos > ul > li::before {
     content: counter(proj, decimal-leading-zero);
-    grid-row: 1 / span 2;
+    grid-column: 1;
+    grid-row: 1;
     font-size: 0.9rem;
     font-weight: 600;
     color: var(--texto-fraco);
@@ -582,6 +597,13 @@ footer {
     #projetos > ul > li {
         grid-template-columns: 1fr;
         gap: 0;
+    }
+
+    /* coluna unica: o conteudo volta para a coluna 1, senao o
+       grid-column: 2 do desktop criaria uma coluna implicita */
+    #projetos > ul > li > *,
+    #projetos > ul > li::before {
+        grid-column: 1;
     }
 
     #projetos > ul > li::before {

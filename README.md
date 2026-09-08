@@ -51,4 +51,4 @@ Se desejar testar o código em sua máquina:
 
 1. Clone o repositório:
    ```bash
-   git clone [https://github.com/RyanZine/portfolio.git](https://github.com/RyanZine/portfolio.git)
+   git clone https://github.com/RyanZine/Portfolio.git

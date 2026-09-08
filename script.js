@@ -4,8 +4,9 @@ const navMenu = document.querySelector('.nav-menu');
 const navLinks = document.querySelectorAll('.nav-menu a'); // Novo: seleciona os links
 
 menuToggle.addEventListener('click', () => {
-    navMenu.classList.toggle('active');
+    const aberto = navMenu.classList.toggle('active');
     menuToggle.classList.toggle('open');
+    menuToggle.setAttribute('aria-expanded', String(aberto));
 });
 
 // Novo: Fecha o menu ao clicar em qualquer link (importante para mobile)
@@ -13,6 +14,7 @@ navLinks.forEach(link => {
     link.addEventListener('click', () => {
         navMenu.classList.remove('active');
         menuToggle.classList.remove('open');
+        menuToggle.setAttribute('aria-expanded', 'false');
     });
 });
 

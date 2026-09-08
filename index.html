@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Portfólio de Ryan Zinedine: desenvolvedor front-end e mobile em São Paulo. Projetos em HTML, CSS, JavaScript e Flutter.">
+    <meta name="description" content="Portfólio de Ryan Zinedine: desenvolvedor front-end e mobile em São Paulo. Projetos em HTML, CSS, JavaScript e Supabase.">
     <meta name="author" content="Ryan Zinedine">
     <link rel="canonical" href="https://portfolio-ryanzine.vercel.app/">
 
@@ -12,13 +12,13 @@
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://portfolio-ryanzine.vercel.app/">
     <meta property="og:title" content="Ryan Zinedine — Desenvolvedor Front-end & Mobile">
-    <meta property="og:description" content="Portfólio de Ryan Zinedine: desenvolvedor front-end e mobile em São Paulo. Projetos em HTML, CSS, JavaScript e Flutter.">
+    <meta property="og:description" content="Portfólio de Ryan Zinedine: desenvolvedor front-end e mobile em São Paulo. Projetos em HTML, CSS, JavaScript e Supabase.">
     <meta property="og:image" content="https://portfolio-ryanzine.vercel.app/img/rz.png">
     <meta property="og:locale" content="pt_BR">
 
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Ryan Zinedine — Desenvolvedor Front-end & Mobile">
-    <meta name="twitter:description" content="Portfólio de Ryan Zinedine: desenvolvedor front-end e mobile em São Paulo. Projetos em HTML, CSS, JavaScript e Flutter.">
+    <meta name="twitter:description" content="Portfólio de Ryan Zinedine: desenvolvedor front-end e mobile em São Paulo. Projetos em HTML, CSS, JavaScript e Supabase.">
     <meta name="twitter:image" content="https://portfolio-ryanzine.vercel.app/img/rz.png">
     <link rel="shortcut icon" href="img/logo.png" type="image/x-icon">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -39,10 +39,9 @@
 
     <!--cabeçalho-->
     <header>
-        <div class="brand">
-            <h1><span class="logo-rz">RZ</span> Ryan Zinedine Rodrigues de Sousa Pereira</h1>
-            <p>Desenvolvedor Front-end HTML | CSS | JavaScript</p>
-        </div>
+        <a class="brand" href="#topo" aria-label="Ryan Zinedine — inicio">
+            <span class="logo-rz">RZ</span>
+        </a>
 
         <!--menu hamburguer-->
         <button class="menu-toggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="nav-menu">
@@ -61,7 +60,14 @@
         </nav>
     </header>
 
-    <main>
+    <main id="topo">
+        <!--hero-->
+        <section class="hero">
+            <h1><span>Ryan</span><span>Zinedine</span></h1>
+            <p class="hero-sub">Desenvolvedor Front-end &amp; Mobile <span aria-hidden="true">&middot;</span> São Paulo, BR</p>
+            <p class="hero-stack">HTML &middot; CSS &middot; JavaScript &middot; Supabase</p>
+        </section>
+
         <section id="sobre" class="reveal">
             <!--Resumo-->
             <h2>Sobre</h2>
@@ -81,6 +87,7 @@
                     <!--Coffe Peace-->
                     <li>
                         <h3>Coffe-Peace (EnergyPeace)</h3>
+                        <ul class="tags"><li>HTML</li><li>CSS</li><li>JavaScript</li></ul>
                         <img src="video/coffe&peace-preview.gif" alt="Pré-visualização do projeto Coffee & Peace">
                         <p>Coffe&Peace é uma aplicação web interativa que simula uma experiência digital de cafeteria,
                             desenvolvida com foco em usabilidade, design moderno e performance. O projeto evidencia a
@@ -97,16 +104,17 @@
                             estruturação
                             de layouts e desenvolvimento de interfaces responsivas, demonstrando preparo para atuar em
                             projetos reais e colaborativos.</p>
-                        <div class="link-projetos"><a target="_blank" rel="noopener noreferrer" href="https://github.com/RyanZine/Coffe-Peace.git"
-                                title="repositório do CoffePeace">Github: https://github.com/RyanZine/Coffe-Peace.git</a>
-                        </div>
-                        <div class="link-projetos"><a target="_blank" rel="noopener noreferrer" href="https://coffe-peace.vercel.app/"
-                                title="deploy do CoffePeace">Vercel: https://coffe-peace.vercel.app/</a></div>
-                    </li>
+                        <div class="proj-links">
+                            <a class="link-proj" target="_blank" rel="noopener noreferrer" href="https://github.com/RyanZine/Coffe-Peace"
+                                title="repositório do CoffePeace">Repositório <span aria-hidden="true">&#8599;</span></a>
+                        <a class="link-proj" target="_blank" rel="noopener noreferrer" href="https://coffe-peace.vercel.app/"
+                                title="deploy do CoffePeace">Ver site <span aria-hidden="true">&#8599;</span></a>
+                    </div></li>
 
                     <!--Brasa Viva-->
                     <li>
                         <h3>Brasa Viva</h3>
+                        <ul class="tags"><li>HTML</li><li>CSS</li><li>JavaScript</li></ul>
                         <img loading="lazy" decoding="async" src="video/BrasaViva.gif" alt="Pré-visualização do projeto Brasa Viva">
                         <p>Brasa Viva é uma aplicação web com temática de churrascaria, desenvolvida com foco em
                             identidade
@@ -127,28 +135,29 @@
                             de JavaScript, reforçando domínio em CSS, responsividade e construção de UI, além de atenção
                             à
                             experiência do usuário (UX) e aos detalhes visuais.</p>
-                        <div class="link-projetos"><a target="_blank" rel="noopener noreferrer" href="https://github.com/RyanZine/BrasaViva.git"
-                                title="repositório do Brasa Viva.">Github: https://github.com/RyanZine/BrasaViva.git</a>
-                        </div>
-                        <div class="link-projetos"><a target="_blank" rel="noopener noreferrer" href="https://brasa-viva.vercel.app/"
-                                title="Deploy do Brasa Viva">Vercel: https://brasa-viva.vercel.app/</a></div>
-                    </li>
+                        <div class="proj-links">
+                            <a class="link-proj" target="_blank" rel="noopener noreferrer" href="https://github.com/RyanZine/BrasaViva"
+                                title="repositório do Brasa Viva.">Repositório <span aria-hidden="true">&#8599;</span></a>
+                        <a class="link-proj" target="_blank" rel="noopener noreferrer" href="https://brasa-viva.vercel.app/"
+                                title="Deploy do Brasa Viva">Ver site <span aria-hidden="true">&#8599;</span></a>
+                    </div></li>
 
                     <!--Vila dos Estudos-->
                     <li>
                         <h3>Vila dos Estudos</h3>
+                        <ul class="tags"><li>HTML</li><li>CSS</li><li>JavaScript</li><li>Supabase</li><li>DOMPurify</li></ul>
                         <img loading="lazy" decoding="async" src="video/preview-Vila.gif" alt="Pré-visualização do projeto Vila dos Estudos">
                         <p>Vila dos Estudos é uma plataforma educacional interativa projetada para apoiar turmas de reforço escolar. O projeto foca na organização de conteúdos com usabilidade e impacto social, entregando um ambiente seguro com painéis de acesso distintos para alunos e professores.</p>
 
                         <p>Desenvolvido com HTML, CSS e JavaScript, o projeto integra o Supabase (BaaS) para autenticação e gestão de banco de dados em tempo real. A aplicação aplica conceitos de design responsivo, manipulação avançada do DOM e segurança contra ataques XSS utilizando DOMPurify.</p>
 
                         <p>A plataforma marca uma forte evolução técnica ao conectar o front-end a serviços de back-end. O projeto reforça habilidades essenciais em arquitetura de dados, proteção de rotas e UX, demonstrando maturidade e preparo para o desenvolvimento de aplicações web completas e colaborativas.</p>
-                        <div class="link-projetos"><a target="_blank" rel="noopener noreferrer" href="https://github.com/RyanZine/Vila-dos-Estudos.git"
-                                title="repositório do Vila dos Estudos.">Github: https://github.com/RyanZine/Vila-dos-Estudos.git</a>
-                        </div>
-                        <div class="link-projetos"><a target="_blank" rel="noopener noreferrer" href="https://vila-dos-estudos.vercel.app/src/pages/index.html"
-                                title="Deploy do Vila dos Estudos">Vercel: https://vila-dos-estudos.vercel.app/src/pages/index.html</a></div>
-                    </li>
+                        <div class="proj-links">
+                            <a class="link-proj" target="_blank" rel="noopener noreferrer" href="https://github.com/RyanZine/Vila-dos-Estudos"
+                                title="repositório do Vila dos Estudos.">Repositório <span aria-hidden="true">&#8599;</span></a>
+                        <a class="link-proj" target="_blank" rel="noopener noreferrer" href="https://vila-dos-estudos.vercel.app/src/pages/index.html"
+                                title="Deploy do Vila dos Estudos">Ver site <span aria-hidden="true">&#8599;</span></a>
+                    </div></li>
                 </ul>
             </section>
 

@@ -819,27 +819,63 @@ p + p {
     transform: translateY(-2px);
 }
 
-.proj-shot {
-    display: block;
+
+
+
+
+/* capa dos projetos: a logo sobre a grade de pontos, com o brilho na cor do projeto */
+.capa {
     position: relative;
     z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1.1rem;
     overflow: hidden;
-    background: var(--fundo-alt);
+    background:
+        radial-gradient(55% 55% at 50% 45%, color-mix(in srgb, var(--cor) 26%, transparent), transparent 72%),
+        radial-gradient(rgba(255, 255, 255, 0.07) 1px, transparent 1px) 0 0 / 22px 22px,
+        #060606;
+}
+
+.capa img {
+    width: 112px;
+    height: 112px;
+    object-fit: contain;
+    filter: drop-shadow(0 14px 28px color-mix(in srgb, var(--cor) 40%, transparent));
+    transition: transform 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.capa-path {
+    font-family: var(--mono);
+    font-size: 0.78rem;
+    color: var(--texto-fraco);
+}
+
+.proj-capa {
     border-right: 1px solid var(--vidro-borda);
+    min-height: 100%;
 }
 
-.proj-shot img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: top center;
-    filter: saturate(0.9);
-    transition: transform 0.6s cubic-bezier(0.22, 1, 0.36, 1), filter var(--transicao);
+.proj-capa img {
+    width: 136px;
+    height: 136px;
 }
 
-.proj:hover .proj-shot img {
-    transform: scale(1.03);
-    filter: saturate(1);
+.mini .capa {
+    padding: 2.25rem 1rem 1.6rem;
+    border-bottom: 1px solid var(--vidro-borda);
+}
+
+.mini .capa img {
+    width: 96px;
+    height: 96px;
+}
+
+.proj:hover .capa img,
+.mini:hover .capa img {
+    transform: translateY(-4px) scale(1.04);
 }
 
 .proj-body {
@@ -900,25 +936,12 @@ p + p {
     transform: translateY(-2px);
 }
 
-.mini img,
 .mini-body {
     position: relative;
     z-index: 1;
 }
 
-.mini img {
-    width: 100%;
-    aspect-ratio: 16 / 9;
-    object-fit: cover;
-    object-position: top center;
-    border-bottom: 1px solid var(--vidro-borda);
-    filter: saturate(0.85);
-    transition: filter var(--transicao);
-}
 
-.mini:hover img {
-    filter: saturate(1);
-}
 
 .mini-body {
     padding: 1.4rem;
@@ -1193,13 +1216,15 @@ p + p {
         grid-template-columns: 1fr;
     }
 
-    .proj-shot {
+    .proj-capa {
         border-right: none;
-        border-bottom: 1px solid var(--linha);
+        border-bottom: 1px solid var(--vidro-borda);
+        padding: 2.75rem 1rem 2.25rem;
     }
 
-    .proj-shot img {
-        aspect-ratio: 16 / 9;
+    .proj-capa img {
+        width: 104px;
+        height: 104px;
     }
 }
 

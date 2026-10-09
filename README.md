@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="img/marca.png" alt="Ryan Zinedine — Desenvolvedor Front-end &amp; Mobile" width="820">
+  <img src="img/marca.png" alt="Ryan Zinedine — Desenvolvedor Front-end" width="820">
 </p>
 
 <p align="center">
@@ -23,7 +23,7 @@ build, sem dependência para instalar. Publicada na Vercel.
 | Seção | Conteúdo |
 | --- | --- |
 | **Sobre** | Quem eu sou e a stack, num grid de cartões |
-| **Experiência** | SmartRanch, na Mindloop — app Flutter para o agronegócio, com câmeras ao vivo (WebRTC/WHEP), tempo real e backend em Supabase |
+| **Experiência** | SmartRanch, na Mindloop — app de gestão e monitoramento para o agronegócio, com backend em Supabase |
 | **Projetos** | Classifier e Reset Mind em destaque; landing pages antigas agrupadas em "trabalhos anteriores" |
 | **Trajeto** | Formação, cursos e marcos, do mais recente ao começo |
 | **Contato** | E-mail e redes |

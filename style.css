@@ -13,8 +13,8 @@
 
 :root {
     /* superfícies */
-    --fundo: #0a0a0b;
-    --fundo-alt: #101012;
+    --fundo: #000000;
+    --fundo-alt: #0b0b0b;
     --cartao: #121215;
     --linha: #212126;
     --linha-forte: #34343c;
@@ -25,10 +25,11 @@
     --texto-fraco: #8a8a93;
 
     /* acento */
-    --acento: #6ea8fe;
-    --acento-fraco: rgba(110, 168, 254, 0.14);
+    --acento: #22d3ee;
+    --acento-fraco: rgba(34, 211, 238, 0.14);
 
     --display: 'Space Grotesk', 'Segoe UI', system-ui, sans-serif;
+    --mono: 'JetBrains Mono', ui-monospace, Consolas, monospace;
     --corpo: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif;
 
     --acento-2: #a78bfa;
@@ -74,9 +75,10 @@ body::before {
     inset: 0;
     z-index: -2;
     background:
-        radial-gradient(38% 30% at 12% 0%, rgba(110, 168, 254, 0.16), transparent 70%),
+        radial-gradient(rgba(255, 255, 255, 0.07) 1px, transparent 1px) 0 0 / 24px 24px,
+        radial-gradient(38% 30% at 12% 0%, rgba(34, 211, 238, 0.16), transparent 70%),
         radial-gradient(32% 26% at 92% 14%, rgba(167, 139, 250, 0.12), transparent 70%),
-        radial-gradient(46% 34% at 50% 100%, rgba(110, 168, 254, 0.07), transparent 72%);
+        radial-gradient(46% 34% at 50% 100%, rgba(34, 211, 238, 0.07), transparent 72%);
     pointer-events: none;
 }
 
@@ -103,7 +105,7 @@ a {
 }
 
 code {
-    font-family: ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, monospace;
+    font-family: var(--mono);
     font-size: 0.87em;
     color: var(--texto);
     background: var(--fundo-alt);
@@ -328,7 +330,7 @@ section {
 }
 
 .section-num {
-    font-family: var(--display);
+    font-family: var(--mono);
     font-size: 0.72rem;
     font-weight: 600;
     color: var(--acento);
@@ -336,12 +338,18 @@ section {
 }
 
 .section-head h2 {
-    font-family: var(--display);
-    font-size: 0.78rem;
-    font-weight: 600;
-    letter-spacing: 0.26em;
-    text-transform: uppercase;
-    color: var(--texto-fraco);
+    font-family: var(--mono);
+    font-size: 0.82rem;
+    font-weight: 400;
+    letter-spacing: 0.04em;
+    text-transform: lowercase;
+    color: var(--texto-suave);
+}
+
+/* comentário de código, como no banner do LinkedIn */
+.section-head h2::before {
+    content: '// ';
+    color: var(--acento-2);
 }
 
 p {
@@ -378,7 +386,7 @@ p + p {
     position: absolute;
     inset: -12%;
     border-radius: 50%;
-    background: radial-gradient(closest-side, rgba(110, 168, 254, 0.22), transparent 72%);
+    background: radial-gradient(closest-side, rgba(34, 211, 238, 0.22), transparent 72%);
     z-index: -1;
 }
 
@@ -394,6 +402,7 @@ p + p {
 /* o brilho do hero agora vem da malha do body::before */
 
 .eyebrow {
+    font-family: var(--mono);
     display: inline-flex;
     align-items: center;
     gap: 0.6rem;
@@ -442,6 +451,12 @@ p + p {
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
+}
+
+/* sobrenome em ciano, igual ao banner */
+.hero h1 .destaque {
+    color: var(--acento);
+    -webkit-text-fill-color: var(--acento);
 }
 
 .hero-cargo {
@@ -549,6 +564,7 @@ p + p {
 }
 
 .aside-title {
+    font-family: var(--mono);
     font-size: 0.72rem;
     font-weight: 600;
     letter-spacing: 0.2em;
@@ -606,7 +622,7 @@ p + p {
     inset: 0;
     border-radius: inherit;
     background: radial-gradient(20rem 20rem at var(--mx, 50%) var(--my, 0%),
-            rgba(110, 168, 254, 0.13), transparent 68%);
+            rgba(34, 211, 238, 0.13), transparent 68%);
     opacity: 0;
     transition: opacity 0.4s ease;
     pointer-events: none;
@@ -836,6 +852,7 @@ p + p {
 }
 
 .proj-kicker {
+    font-family: var(--mono);
     font-size: 0.78rem;
     font-weight: 500;
     letter-spacing: 0.1em;
@@ -966,7 +983,7 @@ p + p {
 .timeline-item:first-child::before {
     background: var(--acento);
     border-color: var(--acento);
-    box-shadow: 0 0 0 4px rgba(110, 168, 254, 0.16);
+    box-shadow: 0 0 0 4px rgba(34, 211, 238, 0.16);
 }
 
 .timeline-item:hover::before {
@@ -975,6 +992,7 @@ p + p {
 }
 
 .timeline-date {
+    font-family: var(--mono);
     font-size: 0.72rem;
     font-weight: 600;
     letter-spacing: 0.12em;

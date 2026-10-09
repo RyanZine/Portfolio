@@ -24,7 +24,7 @@ build, sem dependência para instalar. Publicada na Vercel.
 | --- | --- |
 | **Sobre** | Quem eu sou e a stack, num grid de cartões |
 | **Experiência** | SmartRanch, na Mindloop — app de gestão e monitoramento para o agronegócio, com backend em Supabase |
-| **Projetos** | Classifier e Reset Mind em destaque; landing pages antigas agrupadas em "trabalhos anteriores" |
+| **Projetos** | Classifier em destaque; Pequenos Programadores e Coffe & Peace em "trabalhos anteriores" |
 | **Trajeto** | Formação, cursos e marcos, do mais recente ao começo |
 | **Contato** | E-mail e redes |
 

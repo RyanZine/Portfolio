@@ -632,6 +632,10 @@ p + p {
     opacity: 1;
 }
 
+.exp + .exp {
+    margin-top: 1.5rem;
+}
+
 .exp-head {
     display: flex;
     flex-wrap: wrap;

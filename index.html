@@ -292,24 +292,30 @@
             </div>
 
             <div class="projetos">
-                <!-- Vila dos Estudos -->
+                <!-- Classifier -->
                 <article class="proj spot">
-                    <div class="proj-shot">
-                        <img src="img/projetos/vila-estudos.webp" width="1200" height="750"
-                             alt="Tela inicial da Vila dos Estudos, com o carrossel de aulas">
-                    </div>
+                    <a class="proj-shot" href="https://ryanzine.github.io/Projects/" target="_blank" rel="noopener noreferrer" tabindex="-1" aria-hidden="true">
+                        <img src="img/projetos/classifier.webp" width="1200" height="750" alt="">
+                    </a>
                     <div class="proj-body">
-                        <h3>Vila dos Estudos</h3>
-                        <p class="proj-kicker">Plataforma de reforço escolar</p>
-                        <p>Aluno e professor entram pela mesma porta e veem painéis diferentes. O professor publica a
-                            aula, a turma lê — autenticação, banco e permissões ficam no Supabase. Todo conteúdo enviado
-                            passa por <strong>DOMPurify</strong> antes de chegar à tela: é o ponto em que o projeto
-                            deixou de ser um site e virou um sistema com dados de terceiros.</p>
+                        <h3>Classifier</h3>
+                        <p class="proj-kicker">Trilhas de estudo com Machine Learning + LLM</p>
+                        <p>Uma rede neural própria em <strong>TensorFlow.js</strong> classifica o perfil do aluno e
+                            recomenda o plano; uma LLM com escopo fechado (Gemini) monta a trilha de estudos usando só
+                            o catálogo da plataforma, com saída em JSON validada e trilha padrão como plano B. Os dados
+                            entram por uma API <strong>Fastify</strong> com JSON Schema, o feedback dos alunos alimenta
+                            o retreino do modelo e um simulador roda a classificação direto no navegador.</p>
                         <ul class="tags">
-                            <li style="--marca: #f7df1e">JavaScript</li><li style="--marca: #3fcf8e">Supabase</li><li style="--marca: #7b95f2">PostgreSQL</li><li style="--marca: #7fd6b5">DOMPurify</li><li>i18n</li>
+                            <li style="--marca: #ff8f00">TensorFlow.js</li><li style="--marca: #8bc34a">Node.js</li><li style="--marca: #e8e8e8">Fastify</li><li style="--marca: #7b95f2">Gemini</li><li>node:test</li>
                         </ul>
                         <div class="links">
-                            <a class="link" href="https://github.com/RyanZine/Vila-dos-Estudos" target="_blank" rel="noopener noreferrer">
+                            <a class="link" href="https://ryanzine.github.io/Projects/" target="_blank" rel="noopener noreferrer">
+                                Ver site <svg class="icon-sm" aria-hidden="true"><use href="#i-arrow" /></svg>
+                            </a>
+                            <a class="link" href="https://ryanzine.github.io/Projects/simulador.html" target="_blank" rel="noopener noreferrer">
+                                Simulador <svg class="icon-sm" aria-hidden="true"><use href="#i-arrow" /></svg>
+                            </a>
+                            <a class="link" href="https://github.com/RyanZine/Projects/tree/main/classifier" target="_blank" rel="noopener noreferrer">
                                 Código <svg class="icon-sm" aria-hidden="true"><use href="#i-arrow" /></svg>
                             </a>
                         </div>
@@ -395,7 +401,7 @@
                     <p class="timeline-date">Em curso</p>
                     <h3>Engenharia de IA Aplicada <span class="timeline-tag">UniPDS</span></h3>
                     <p>Extensão em inteligência artificial aplicada: fundamentos, modelos e uso de IA em
-                        produtos reais.</p>
+                        produtos reais. O primeiro projeto do curso é o Classifier.</p>
                 </li>
                 <li class="timeline-item">
                     <p class="timeline-date">2025 — em curso</p>

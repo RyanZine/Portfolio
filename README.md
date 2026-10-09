@@ -24,7 +24,7 @@ build, sem dependência para instalar. Publicada na Vercel.
 | --- | --- |
 | **Sobre** | Quem eu sou e a stack, num grid de cartões |
 | **Experiência** | SmartRanch, na Mindloop — app Flutter para o agronegócio, com câmeras ao vivo (WebRTC/WHEP), tempo real e backend em Supabase |
-| **Projetos** | Vila dos Estudos e Reset Mind em destaque; landing pages antigas agrupadas em "trabalhos anteriores" |
+| **Projetos** | Classifier e Reset Mind em destaque; landing pages antigas agrupadas em "trabalhos anteriores" |
 | **Trajeto** | Formação, cursos e marcos, do mais recente ao começo |
 | **Contato** | E-mail e redes |
 

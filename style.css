@@ -36,7 +36,9 @@
     --vidro: rgba(255, 255, 255, 0.035);
     --vidro-borda: rgba(255, 255, 255, 0.08);
 
-    --largura: 1080px;
+    /* conteúdo ocupa quase toda a tela, com margem que cresce junto, até 1880px */
+    --largura: 1880px;
+    --margem: clamp(1.25rem, 5vw, 6rem);
     --raio-lg: 24px;
     --raio: 16px;
     --raio-sm: 10px;
@@ -44,6 +46,8 @@
 }
 
 html {
+    /* a letra cresce um pouco em telas grandes: 16px no notebook, até 20px em monitores largos */
+    font-size: clamp(16px, 0.3vw + 12px, 20px);
     scroll-behavior: smooth;
     -webkit-text-size-adjust: 100%;
     /* clip (e nao hidden) corta o excesso lateral sem quebrar o header sticky */
@@ -171,7 +175,7 @@ strong {
     position: sticky;
     top: 0;
     z-index: 100;
-    padding: 0.85rem 6% 0;
+    padding: 0.85rem var(--margem) 0;
 }
 
 /* a barra flutua como uma pilula de vidro em vez de colar no topo da tela */
@@ -312,9 +316,9 @@ strong {
 main {
     flex: 1;
     width: 100%;
-    max-width: var(--largura);
+    max-width: calc(var(--largura) + 2 * var(--margem));
     margin: 0 auto;
-    padding: 0 6% 2rem;
+    padding: 0 var(--margem) 2rem;
 }
 
 section {
@@ -1136,7 +1140,7 @@ p + p {
 /* -------------------------------------------------------------- rodapé -- */
 .site-footer {
     border-top: 1px solid var(--linha);
-    padding: 2.5rem 6%;
+    padding: 2.5rem var(--margem);
 }
 
 .footer-inner {
@@ -1145,7 +1149,8 @@ p + p {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
+    text-align: center;
     gap: 0.75rem 1.5rem;
 }
 
@@ -1184,6 +1189,101 @@ p + p {
     .js .reveal {
         opacity: 1;
         transform: none;
+    }
+}
+
+/* -------------------------------------------------------- telas largas -- */
+/* a partir de notebooks grandes, o layout se espalha em vez de virar uma coluna estreita */
+@media (min-width: 1200px) {
+    .hero {
+        grid-template-columns: minmax(0, 1fr) clamp(20rem, 26vw, 28rem);
+        padding-block: clamp(4rem, 10vh, 7rem) 6rem;
+    }
+
+    .hero-foto {
+        max-width: 28rem;
+    }
+
+    .hero h1 {
+        font-size: clamp(3.6rem, 5vw, 5.4rem);
+    }
+
+    .hero-cargo {
+        font-size: clamp(1.3rem, 1.6vw, 1.75rem);
+    }
+
+    .hero-lead {
+        font-size: clamp(1.08rem, 1vw, 1.2rem);
+        max-width: 62ch;
+    }
+
+    section {
+        padding-block: 6.5rem;
+    }
+
+    /* sobre: texto, stack e ferramentas lado a lado */
+    .bento {
+        grid-template-columns: minmax(0, 1.7fr) minmax(0, 1fr) minmax(0, 1fr);
+    }
+
+    .bento-texto {
+        grid-row: auto;
+    }
+
+    /* as duas experiências lado a lado */
+    .exps {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        align-items: start;
+        gap: 1.5rem;
+    }
+
+    .exps .exp + .exp {
+        margin-top: 0;
+    }
+
+    /* trajeto: a linha vertical vira uma grade de três colunas, lida da esquerda para a direita */
+    .timeline {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 2.75rem 2.5rem;
+        padding-left: 0;
+    }
+
+    .timeline::before {
+        display: none;
+    }
+
+    .timeline-item {
+        padding: 1.6rem 0 0;
+        border-top: 1px solid var(--linha-forte);
+    }
+
+    .timeline-item::before {
+        left: 0;
+        top: -4px;
+    }
+
+    /* contato: frase e e-mail à esquerda, links empilhados à direita */
+    .contato-card {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) auto;
+        align-items: end;
+        column-gap: 4rem;
+    }
+
+    .contato-links {
+        grid-column: 2;
+        grid-row: 1 / span 2;
+        flex-direction: column;
+        gap: 1.1rem;
+        margin-top: 0;
+        padding-left: 3rem;
+        border-left: 1px solid var(--linha);
+    }
+
+    .contato-links a {
+        font-size: 1rem;
     }
 }
 

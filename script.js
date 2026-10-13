@@ -81,6 +81,34 @@
         }, { threshold: 0 }).observe(sentinela);
     }
 
+    /* ------------------------------- trailers dos projetos --------------- */
+    // toca só quando o card está na tela; sem movimento ou com economia de dados, fica a logo
+    const economiaDeDados = navigator.connection && navigator.connection.saveData;
+    const trailers = document.querySelectorAll('.capa-trailer');
+
+    if (trailers.length && 'IntersectionObserver' in window && !economiaDeDados &&
+        !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+        const observadorTrailer = new IntersectionObserver((entradas) => {
+            entradas.forEach((entrada) => {
+                const video = entrada.target;
+                if (entrada.isIntersecting) {
+                    video.play().catch(() => {});
+                } else {
+                    video.pause();
+                }
+            });
+        }, { threshold: 0.35 });
+
+        trailers.forEach((video) => {
+            const capa = video.closest('.capa');
+            capa.classList.add('com-trailer');
+            // se nenhum formato carregar (o erro do último <source>), volta para a logo
+            const ultimaFonte = video.querySelector('source:last-of-type') || video;
+            ultimaFonte.addEventListener('error', () => capa.classList.remove('com-trailer'));
+            observadorTrailer.observe(video);
+        });
+    }
+
     /* ------------------------------- brilho que acompanha o cursor ------- */
     const comHover = window.matchMedia('(hover: hover) and (pointer: fine)').matches;
     const semAnimacaoGlobal = window.matchMedia('(prefers-reduced-motion: reduce)').matches;

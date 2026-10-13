@@ -877,6 +877,33 @@ p + p {
     height: 96px;
 }
 
+/* trailer: só aparece quando o script confirma que pode tocar; senão, fica a logo */
+.capa-trailer {
+    display: none;
+    width: min(88%, 36rem);
+    height: auto;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    border-radius: 12px;
+    border: 1px solid var(--vidro-borda);
+    background: #0b0b0b;
+    box-shadow: 0 28px 70px -24px color-mix(in srgb, var(--cor) 55%, transparent);
+    transition: transform 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.capa.com-trailer .capa-trailer {
+    display: block;
+}
+
+.capa.com-trailer img {
+    display: none;
+}
+
+.proj:hover .capa-trailer,
+.mini:hover .capa-trailer {
+    transform: translateY(-4px) scale(1.02);
+}
+
 .proj:hover .capa img,
 .mini:hover .capa img {
     transform: translateY(-4px) scale(1.04);
@@ -905,7 +932,7 @@ p + p {
     margin: 0.3rem 0 1.1rem;
 }
 
-/* trabalhos anteriores */
+/* projetos de estudo */
 .subhead {
     font-family: var(--display);
     font-size: 1.05rem;
@@ -965,6 +992,56 @@ p + p {
 
 .mini-body .tags {
     margin-top: 1rem;
+}
+
+/* linha do tempo curta dentro do card: mostra que o projeto cresceu */
+.evolucao {
+    list-style: none;
+    margin-top: 1.1rem;
+    padding-left: 0.9rem;
+    border-left: 1px solid var(--linha-forte);
+    display: grid;
+    gap: 0.45rem;
+}
+
+.evolucao li {
+    position: relative;
+    display: grid;
+    grid-template-columns: 4.6rem 1fr;
+    column-gap: 0.5rem;
+    font-size: 0.82rem;
+    color: var(--texto-fraco);
+}
+
+.evolucao li::before {
+    content: "";
+    position: absolute;
+    left: calc(-0.9rem - 3px);
+    top: 0.5em;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background: var(--linha-forte);
+}
+
+/* o ponto aceso é a versão atual */
+.evolucao li:nth-last-child(2)::before {
+    background: var(--acento);
+}
+
+.evolucao span {
+    font-family: var(--mono);
+    font-size: 0.74rem;
+    color: var(--texto);
+}
+
+.evolucao-proximo {
+    font-style: italic;
+}
+
+.evolucao-proximo::before {
+    background: transparent !important;
+    border: 1px dashed var(--texto-fraco);
 }
 
 .mini-body .links {

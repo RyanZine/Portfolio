@@ -877,6 +877,73 @@ p + p {
     height: 96px;
 }
 
+/* botão de trailer: mesmo visual dos links do card */
+.link-trailer {
+    background: none;
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+    font-family: inherit;
+    cursor: pointer;
+    color: var(--acento);
+}
+
+.link-trailer .icon-sm {
+    width: 0.8em;
+    height: 0.8em;
+}
+
+.link-dur {
+    font-family: var(--mono);
+    font-size: 0.72rem;
+    font-weight: 400;
+    color: var(--texto-fraco);
+}
+
+/* player do trailer narrado */
+.trailer-modal {
+    margin: auto;
+    width: min(92vw, 1100px);
+    max-width: none;
+    padding: 0;
+    border: 1px solid var(--vidro-borda);
+    border-radius: 14px;
+    background: #000;
+    overflow: visible;
+}
+
+.trailer-modal::backdrop {
+    background: rgba(0, 0, 0, 0.82);
+    backdrop-filter: blur(6px);
+}
+
+.trailer-modal video {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 14px;
+}
+
+.trailer-fechar {
+    position: absolute;
+    top: -2.9rem;
+    right: 0;
+    width: 2.4rem;
+    height: 2.4rem;
+    border-radius: 50%;
+    border: 1px solid var(--vidro-borda);
+    background: rgba(255, 255, 255, 0.06);
+    color: var(--texto);
+    font-size: 1.5rem;
+    line-height: 1;
+    cursor: pointer;
+}
+
+.trailer-fechar:hover {
+    border-color: var(--acento);
+    color: var(--acento);
+}
+
 /* trailer: só aparece quando o script confirma que pode tocar; senão, fica a logo */
 .capa-trailer {
     display: none;

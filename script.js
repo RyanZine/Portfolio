@@ -109,6 +109,29 @@
         });
     }
 
+    /* ------------------------------- trailer narrado (com som) ----------- */
+    // o navegador só deixa tocar com som depois de um clique: o botão abre o player
+    document.querySelectorAll('[data-trailer]').forEach((botao) => {
+        const modal = document.getElementById(botao.dataset.trailer);
+        if (!modal || typeof modal.showModal !== 'function') {
+            botao.hidden = true;
+            return;
+        }
+        const video = modal.querySelector('video');
+
+        botao.addEventListener('click', () => {
+            modal.showModal();
+            video.currentTime = 0;
+            video.play().catch(() => {});
+        });
+        modal.querySelector('.trailer-fechar').addEventListener('click', () => modal.close());
+        // clique fora do vídeo fecha
+        modal.addEventListener('click', (evento) => {
+            if (evento.target === modal) modal.close();
+        });
+        modal.addEventListener('close', () => video.pause());
+    });
+
     /* ------------------------------- brilho que acompanha o cursor ------- */
     const comHover = window.matchMedia('(hover: hover) and (pointer: fine)').matches;
     const semAnimacaoGlobal = window.matchMedia('(prefers-reduced-motion: reduce)').matches;

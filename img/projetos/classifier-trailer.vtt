@@ -1,0 +1,16 @@
+WEBVTT
+
+00:00:00.350 --> 00:00:05.610
+Classifier: trilhas de estudo montadas por duas inteligências artificiais.
+
+00:00:06.510 --> 00:00:12.650
+O aluno conta quantas horas estuda por semana, o nível, a linguagem e a área que quer aprender.
+
+00:00:13.550 --> 00:00:19.840
+Uma rede neural própria, em TensorFlow.js, entende esse perfil e recomenda o plano.
+
+00:00:20.740 --> 00:00:28.400
+Depois, uma LLM com limites monta a trilha usando só o catálogo da plataforma, sem inventar nenhum curso.
+
+00:00:29.300 --> 00:00:37.990
+Machine learning para entender o aluno. Uma LLM para montar o caminho. Teste o simulador no site do projeto.

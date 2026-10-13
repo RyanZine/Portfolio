@@ -92,6 +92,9 @@
         <symbol id="i-vercel" viewBox="0 0 24 24">
             <path fill="currentColor" d="M12 2 23 21H1z" />
         </symbol>
+        <symbol id="i-play" viewBox="0 0 16 16">
+            <path d="M5 3.2v9.6a.6.6 0 0 0 .9.5l7.6-4.8a.6.6 0 0 0 0-1L5.9 2.7a.6.6 0 0 0-.9.5Z" fill="currentColor" />
+        </symbol>
         <symbol id="i-arrow" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
             <path d="M4 12 12 4M5.5 4H12v6.5" />
         </symbol>
@@ -323,6 +326,9 @@
                             <li style="--marca: #ff8f00">TensorFlow.js</li><li style="--marca: #8bc34a">Node.js</li><li style="--marca: #e8e8e8">Fastify</li><li style="--marca: #7b95f2">Gemini</li><li>node:test</li>
                         </ul>
                         <div class="links">
+                            <button class="link link-trailer" type="button" data-trailer="trailer-classifier">
+                                <svg class="icon-sm" aria-hidden="true"><use href="#i-play" /></svg> Trailer <span class="link-dur">40 s</span>
+                            </button>
                             <a class="link" href="https://ryanzine.github.io/Projects/" target="_blank" rel="noopener noreferrer">
                                 Ver site <svg class="icon-sm" aria-hidden="true"><use href="#i-arrow" /></svg>
                             </a>
@@ -450,6 +456,13 @@
                 </ul>
             </div>
         </section>
+        <dialog class="trailer-modal" id="trailer-classifier" aria-label="Trailer do Classifier">
+            <video controls playsinline preload="none" poster="img/projetos/classifier-trailer.jpg" width="1280" height="720">
+                <source src="img/projetos/classifier-trailer-narrado.mp4" type="video/mp4">
+                <track kind="captions" srclang="pt-BR" label="Português" src="img/projetos/classifier-trailer.vtt" default>
+            </video>
+            <button class="trailer-fechar" type="button" aria-label="Fechar trailer">&times;</button>
+        </dialog>
     </main>
 
     <footer class="site-footer">

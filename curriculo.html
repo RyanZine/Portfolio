@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Ryan Zinedine">
+    <title>Currículo — Ryan Zinedine</title>
+    <style>
+        :root {
+            color-scheme: light;
+            --ink: #172033;
+            --muted: #526078;
+            --accent: #2864c5;
+            --line: #dce4ef;
+            --paper: #fff;
+        }
+
+        * { box-sizing: border-box; }
+
+        html { background: #e9edf3; }
+
+        body {
+            width: 210mm;
+            min-height: 297mm;
+            margin: 18px auto;
+            padding: 12mm 14mm 11mm;
+            background: var(--paper);
+            color: var(--ink);
+            font: 9.2pt/1.35 "Segoe UI", Arial, sans-serif;
+            -webkit-print-color-adjust: exact;
+            print-color-adjust: exact;
+        }
+
+        h1, h2, h3, p, ul { margin: 0; }
+
+        .header {
+            border-bottom: 2px solid var(--accent);
+            padding-bottom: 9px;
+            margin-bottom: 10px;
+        }
+
+        h1 {
+            font-size: 24pt;
+            line-height: 1.05;
+            letter-spacing: -.6px;
+        }
+
+        .role {
+            margin-top: 4px;
+            color: var(--accent);
+            font-size: 11pt;
+            font-weight: 700;
+        }
+
+        .summary {
+            margin-top: 7px;
+            max-width: 178mm;
+            color: #344158;
+            font-size: 9.4pt;
+        }
+
+        .contacts {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 3px 13px;
+            margin-top: 8px;
+            color: var(--muted);
+            font-size: 8.2pt;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        .contacts a { color: #244e91; }
+
+        section { margin-top: 9px; }
+
+        h2 {
+            margin-bottom: 5px;
+            padding-bottom: 3px;
+            border-bottom: 1px solid var(--line);
+            color: var(--accent);
+            font-size: 10pt;
+            letter-spacing: .8px;
+            text-transform: uppercase;
+        }
+
+        .entry { margin-top: 5px; }
+
+        .entry-head {
+            display: flex;
+            align-items: baseline;
+            justify-content: space-between;
+            gap: 12px;
+        }
+
+        h3 {
+            font-size: 9.5pt;
+            line-height: 1.25;
+        }
+
+        .date {
+            flex: 0 0 auto;
+            color: var(--muted);
+            font-size: 8.3pt;
+        }
+
+        .org {
+            margin-top: 1px;
+            color: var(--muted);
+            font-size: 8.5pt;
+        }
+
+        ul {
+            padding-left: 15px;
+            margin-top: 3px;
+        }
+
+        li { margin-top: 1px; }
+
+        .project-link {
+            color: #244e91;
+            font-size: 8pt;
+            font-weight: 600;
+        }
+
+        .skills {
+            color: #344158;
+            line-height: 1.5;
+        }
+
+        .skills strong { color: var(--ink); }
+
+        .footer {
+            margin-top: 8px;
+            color: var(--muted);
+            font-size: 7.7pt;
+        }
+
+        @page {
+            size: A4;
+            margin: 0;
+        }
+
+        @media print {
+            html { background: #fff; }
+            body {
+                width: auto;
+                min-height: 0;
+                margin: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <h1>Ryan Zinedine</h1>
+        <p class="role">Desenvolvedor Front-end Júnior</p>
+        <p class="summary">
+            Desenvolvedor em início de carreira, com experiência em suporte técnico, implantação de clientes
+            e criação de páginas web. Construo e publico projetos com HTML, CSS e JavaScript; busco uma
+            oportunidade front-end júnior, remota ou híbrida em São Paulo.
+        </p>
+        <div class="contacts" aria-label="Contato e links">
+            <a href="mailto:zinedinepereira07@gmail.com">zinedinepereira07@gmail.com</a>
+            <span>São Paulo, SP</span>
+            <a href="https://portfolio-ryanzine.vercel.app/">Portfólio</a>
+            <a href="https://github.com/RyanZine">GitHub</a>
+            <a href="https://www.linkedin.com/in/ryan-zinedine-rodrigues-de-sousa-pereira-8b63b3314">LinkedIn</a>
+        </div>
+    </header>
+
+    <main>
+        <section>
+            <h2>Experiência profissional</h2>
+            <article class="entry">
+                <div class="entry-head">
+                    <h3>Assistente de TI — suporte e desenvolvimento</h3>
+                    <p class="date">jul/2026 – out/2026</p>
+                </div>
+                <p class="org">Mindloop · São Paulo, SP · Plataforma SmartRanch</p>
+                <ul>
+                    <li>Implantei novos clientes na plataforma de monitoramento por câmeras, configurando grupos, perfis, câmeras e transmissão RTMP.</li>
+                    <li>Criei, com apoio de IA, duas páginas web: fluxo de contratação e cadastro de câmeras pelo cliente; validei a interface com dados de exemplo antes da integração ao banco.</li>
+                    <li>Realizei consultas e testes em banco de dados para apoiar a aplicação.</li>
+                </ul>
+            </article>
+            <article class="entry">
+                <div class="entry-head">
+                    <h3>Jovem Aprendiz — Recursos Humanos</h3>
+                    <p class="date">nov/2024 – nov/2025</p>
+                </div>
+                <p class="org">Grupo SNS — Serv Nova Serviços · São Paulo, SP</p>
+                <ul>
+                    <li>Captei em média 3 candidatos por dia por telefone, com confirmação e acompanhamento via WhatsApp.</li>
+                    <li>Fiz triagem de currículos e coleta de documentos para contratação, usando Pandapé, Catho e ferramentas de apoio à pesquisa.</li>
+                </ul>
+            </article>
+        </section>
+
+        <section>
+            <h2>Projetos</h2>
+            <article class="entry">
+                <div class="entry-head">
+                    <h3>Browncke — site para negócio de brownies artesanais</h3>
+                    <a class="project-link" href="https://browncke.vercel.app/">Site e código</a>
+                </div>
+                <p>Desenvolvimento do site institucional e catálogo de pedidos de uma confeitaria com delivery. Interface responsiva em HTML, CSS e JavaScript, com cardápio, atendimento por WhatsApp e informações de entrega. Integração de uma vitrine web com suporte a IA via Nemotron para aprimorar a experiência do projeto.</p>
+            </article>
+            <article class="entry">
+                <div class="entry-head">
+                    <h3>Classifier — trilhas de estudo com Machine Learning e LLM</h3>
+                    <a class="project-link" href="https://ryanzine.github.io/Projects/">Site e código</a>
+                </div>
+                <ul>
+                    <li>Projeto que combina rede neural em TensorFlow.js para classificar o perfil do aluno e recomendar um plano com LLM Gemini, restrita ao catálogo da plataforma.</li>
+                    <li>API em Fastify com JSON Schema; inclui validação da saída, trilha padrão alternativa e simulador de classificação no navegador.</li>
+                </ul>
+            </article>
+            <article class="entry">
+                <div class="entry-head">
+                    <h3>Coffe Peace — experiência de cafeteria online</h3>
+                    <a class="project-link" href="https://coffe-peace.vercel.app/">Site e código</a>
+                </div>
+                <p>Fluxo de pedidos e acompanhamento, operação de balcão e painel do lojista para cardápio, cupons e resumo diário. HTML, CSS e JavaScript.</p>
+            </article>
+            <article class="entry">
+                <div class="entry-head">
+                    <h3>Pequenos Programadores — projeto colaborativo</h3>
+                    <a class="project-link" href="https://github.com/RyanZine/Projeto-PP">Código</a>
+                </div>
+                <p>Site de cursos de programação para crianças desenvolvido em equipe de sete pessoas; contribuí com estrutura HTML e organização do repositório. HTML, CSS, JavaScript e Scrum.</p>
+            </article>
+        </section>
+
+        <section>
+            <h2>Formação</h2>
+            <article class="entry">
+                <div class="entry-head">
+                    <h3>Gestão de Tecnologia da Informação — Anhanguera</h3>
+                    <p class="date">2024 – em curso</p>
+                </div>
+            </article>
+            <article class="entry">
+                <div class="entry-head">
+                    <h3>Engenharia de IA Aplicada — UniPDS</h3>
+                    <p class="date">Em curso</p>
+                </div>
+            </article>
+            <p class="org">Formação em tecnologia — Rede Despertar Sonhos · 2024–2025</p>
+        </section>
+
+        <section>
+            <h2>Competências</h2>
+            <p class="skills">
+                <strong>Front-end:</strong> HTML5, CSS3, JavaScript ·
+                <strong>IA e back-end:</strong> TensorFlow.js, Node.js, Fastify, Gemini ·
+                <strong>Dados:</strong> SQL ·
+                <strong>Ferramentas:</strong> Git, GitHub, VS Code, Vercel ·
+                <strong>Colaboração:</strong> Scrum, suporte técnico, atendimento e implantação de clientes
+            </p>
+        </section>
+    </main>
+    <p class="footer">Portfólio: portfolio-ryanzine.vercel.app</p>
+</body>
+</html>
